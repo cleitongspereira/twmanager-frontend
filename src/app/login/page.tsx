@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 import { api } from "@/services/api"
 import { Input } from "@/components/Input"
 import { Button } from "@/components/Button"
@@ -70,6 +71,13 @@ export default function LoginPage() {
           text={loading ? "Entrando..." : "Entrar"}
           disabled={loading}
         />
+
+        <div className="text-center text-sm text-gray-600">
+          Não tem uma conta?{" "}
+          <Link href="/register" className="text-black font-semibold hover:underline">
+            Registre-se
+          </Link>
+        </div>
       </form>
     </main>
   )
