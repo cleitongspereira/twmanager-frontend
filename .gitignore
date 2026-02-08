@@ -24,3 +24,5 @@ TestResults.xml
 node_modules/
 #Next repositories
 .next/
+#Variaveis de ambiente.env
+.env

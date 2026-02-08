@@ -47,34 +47,34 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-4">
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 p-4">
       <div className="w-full max-w-md">
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-2xl shadow-xl p-8 space-y-6"
+          className="bg-gradient-to-b from-amber-50 to-orange-50 rounded-2xl shadow-2xl p-8 space-y-6 border-2 border-amber-200"
         >
           {/* Logo/Ícone */}
           <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl mb-4">
-              <span className="text-3xl font-bold text-white">T</span>
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-2xl mb-4 shadow-lg">
+              <span className="text-3xl font-bold text-amber-50">T</span>
             </div>
-            <h1 className="text-2xl font-bold text-emerald-600 mb-2">
+            <h1 className="text-2xl font-bold text-amber-900 mb-2">
               Entrar
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-amber-700">
               Acesse sua conta e gerencie sua tribo
             </p>
           </div>
 
           {/* Campo E-mail */}
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-amber-900">
               E-mail
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg
-                  className="h-5 w-5 text-gray-400"
+                  className="h-5 w-5 text-amber-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="seu@email.com"
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition"
+                className="w-full pl-10 pr-4 py-3 bg-amber-50 border-2 border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition text-amber-900 placeholder-amber-400"
                 required
               />
             </div>
@@ -100,13 +100,13 @@ export default function LoginPage() {
 
           {/* Campo Senha */}
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-amber-900">
               Senha
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg
-                  className="h-5 w-5 text-gray-400"
+                  className="h-5 w-5 text-amber-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -124,7 +124,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition"
+                className="w-full pl-10 pr-4 py-3 bg-amber-50 border-2 border-amber-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition text-amber-900 placeholder-amber-400"
                 required
               />
             </div>
@@ -132,7 +132,7 @@ export default function LoginPage() {
 
           {/* Mensagem de erro */}
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+            <div className="bg-red-50 border-2 border-red-300 text-red-800 px-4 py-3 rounded-lg text-sm">
               {error}
             </div>
           )}
@@ -141,17 +141,17 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold py-3 rounded-lg hover:from-emerald-600 hover:to-teal-700 transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-500/30"
+            className="w-full bg-gradient-to-r from-amber-600 to-orange-700 text-amber-50 font-semibold py-3 rounded-lg hover:from-amber-700 hover:to-orange-800 transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
           >
             {loading ? "Entrando..." : "Entrar"}
           </button>
 
           {/* Link para registro */}
-          <div className="text-center text-sm text-gray-600">
+          <div className="text-center text-sm text-amber-700">
             Não tem uma conta?{" "}
             <Link
               href="/register"
-              className="text-emerald-600 font-semibold hover:text-emerald-700 hover:underline"
+              className="text-amber-800 font-semibold hover:text-amber-900 hover:underline"
             >
               Registre-se
             </Link>
@@ -159,13 +159,13 @@ export default function LoginPage() {
         </form>
 
         {/* Termos */}
-        <p className="text-center text-xs text-gray-500 mt-6">
+        <p className="text-center text-xs text-amber-700 mt-6">
           Ao continuar, você concorda com nossos{" "}
-          <a href="#" className="text-emerald-600 hover:underline">
+          <a href="#" className="text-amber-800 hover:underline font-medium">
             Termos de Serviço
           </a>{" "}
           e{" "}
-          <a href="#" className="text-emerald-600 hover:underline">
+          <a href="#" className="text-amber-800 hover:underline font-medium">
             Política de Privacidade
           </a>
         </p>
